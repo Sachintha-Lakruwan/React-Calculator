@@ -8,6 +8,8 @@ const initialState = {
   expression: "0",
 };
 
+const operators = ["+", "*", "-", "/"];
+
 const calSlice = createSlice({
   name: "cal",
   initialState,
@@ -16,7 +18,15 @@ const calSlice = createSlice({
       if (state.expression === "0") {
         state.expression = action.payload;
         return;
-        // 34 x 012
+      }
+      const length = state.expression.length;
+      if (
+        length > 2 &&
+        state.expression[length - 1] === "0" &&
+        operators.includes(state.expression[length - 2])
+      ) {
+        state.expression = state.expression.slice(0, -1) + action.payload;
+        return;
       }
 
       state.expression = state.expression + action.payload;
