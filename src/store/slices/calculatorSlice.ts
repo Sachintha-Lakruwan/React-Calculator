@@ -78,7 +78,7 @@ const calSlice = createSlice({
       state.expression = initialState.expression;
     },
     pressEqual: (state) => {
-      state.expression = eval(state.expression);
+      state.expression = String(eval(state.expression));
     },
   },
 });

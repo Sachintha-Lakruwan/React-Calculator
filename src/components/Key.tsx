@@ -28,7 +28,7 @@ export default function Key({
           type === "secondary" && " bg-reset-key text-text-text"
         } ${type === "red" && " bg-equal-key text-text-text "}`}
       >
-        <p>{text}</p>
+        <p className=" select-none">{text}</p>
       </div>
     </div>
   );
