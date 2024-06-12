@@ -49,6 +49,7 @@ const calSlice = createSlice({
     pressDel: (state) => {
       if (state.expression.length === 1) {
         state.expression = initialState.expression;
+        return;
       }
       state.expression = state.expression.slice(0, -1);
     },
