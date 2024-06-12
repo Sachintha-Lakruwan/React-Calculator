@@ -1,10 +1,8 @@
-# React Calculator app with TypeScript and Tailwind
+# React Calculator app with TypeScript, Redux and Tailwind
 
 ## Example Solution for Calculator app Challenge on Frontend Mentor
 
 ### [Link to the Challenge](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29)
-
-<img src="public/icons/mongodb/mongodb.svg" alt="MongoDB Icon"  height="48">
 
 ![alt text](image.png)
 ![alt text](image-2.png)
