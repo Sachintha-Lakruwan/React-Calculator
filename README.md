@@ -2,6 +2,8 @@
 
 ## Example Solution for Calculator app Challenge on Frontend Mentor
 
+### [Live-Demo 🚀](https://calc199.netlify.app/)
+
 ### [Link to the Challenge](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29)
 
 ![alt text](image.png)
