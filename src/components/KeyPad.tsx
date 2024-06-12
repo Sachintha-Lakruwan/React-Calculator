@@ -10,7 +10,6 @@ import {
   pressPlus,
   pressReset,
   pressX,
-  pressZero,
 } from "../store/slices/calculatorSlice";
 
 export default function KeyPad() {
@@ -30,7 +29,7 @@ export default function KeyPad() {
       <Key text="3" func={() => dispatch(pressButton("3"))} />
       <Key text="-" func={() => dispatch(pressMinus())} />
       <Key text="." func={() => dispatch(pressDot())} />
-      <Key text="0" func={() => dispatch(pressZero())} />
+      <Key text="0" func={() => dispatch(pressButton("0"))} />
       <Key text="/" func={() => dispatch(pressDivide())} />
       <Key text="x" func={() => dispatch(pressX())} />
       <Key

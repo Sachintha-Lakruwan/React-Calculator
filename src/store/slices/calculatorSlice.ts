@@ -13,34 +13,43 @@ const calSlice = createSlice({
   initialState,
   reducers: {
     pressButton: (state, action: PayloadAction<string>) => {
-      state.expression = action.payload;
-    },
-    pressZero: (state) => {
-      state.expression = "0";
+      if (state.expression === "0") {
+        state.expression = action.payload;
+        return;
+        // 34 x 012
+      }
+
+      state.expression = state.expression + action.payload;
     },
     pressDot: (state) => {
-      state.expression = ".";
+      // 34 x .56
+      state.expression = state.expression + ".";
     },
     pressMinus: (state) => {
-      state.expression = "-";
+      // 12 + -
+      state.expression = state.expression + "-";
     },
     pressDel: (state) => {
-      state.expression = "del";
+      // 0
+      state.expression = state.expression.slice(0, -1);
     },
     pressPlus: (state) => {
-      state.expression = "+";
+      // 12 + +
+      state.expression = state.expression + "+";
     },
     pressX: (state) => {
-      state.expression = "x";
+      // 12 + +
+      state.expression = state.expression + "*";
     },
     pressDivide: (state) => {
-      state.expression = "/";
+      // 12 + /
+      state.expression = state.expression + "/";
     },
     pressReset: (state) => {
       state.expression = initialState.expression;
     },
     pressEqual: (state) => {
-      state.expression = "=";
+      state.expression = eval(state.expression);
     },
   },
 });
@@ -48,7 +57,6 @@ const calSlice = createSlice({
 export default calSlice.reducer;
 export const {
   pressButton,
-  pressZero,
   pressDot,
   pressMinus,
   pressPlus,
