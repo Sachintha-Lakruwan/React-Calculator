@@ -4,13 +4,13 @@
 
 ### [Live-Demo 🚀](https://calc199.netlify.app/)
 
-### [Link to the Challenge](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29)
+### [Challenge Link](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29)
 
 ![alt text](image.png)
 ![alt text](image-2.png)
 ![alt text](image-1.png)
 
-## Try This App! 👼
+## Try This App Locally! 👼
 
 ### 1. Clone the Project
 
