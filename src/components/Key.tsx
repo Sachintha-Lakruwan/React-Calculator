@@ -13,7 +13,7 @@ export default function Key({ type = "normal", text, large = false }: Props) {
         } ${type === "red" && " bg-equal-key-dark "}`}
       ></div>
       <div
-        className={` flex justify-center items-center rounded-lg  text-3xl font-bold h-full  bg-digits-key text-keys-text relative z-20  ${
+        className={` flex justify-center items-center rounded-lg  text-3xl font-bold h-full  bg-digits-key text-keys-text relative z-20 transition-all duration-75 active:translate-y-1 ${
           type === "secondary" && " bg-reset-key text-text-text"
         } ${type === "red" && " bg-equal-key text-text-text "}`}
       >
