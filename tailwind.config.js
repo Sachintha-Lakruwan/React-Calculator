@@ -19,6 +19,7 @@ export default {
 
         "keys-text": "var(--keys-text)",
         "text-text": "var(--text)",
+        "display-text": "var(--display-text)",
       },
       fontFamily: {
         body: ["League Spartan"],

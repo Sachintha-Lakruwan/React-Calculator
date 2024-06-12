@@ -38,6 +38,7 @@
 
     --keys-text: hsl(221, 14%, 31%);
     --text: hsl(0, 0%, 100%);
+    --display-text: var(--text);
   }
   html[data-theme="theme2"] {
     --background-main: hsl(0, 0%, 90%);
@@ -54,6 +55,7 @@
     --digits-dark: hsl(35, 11%, 61%);
 
     --keys-text: hsl(60, 10%, 19%);
+    --display-text: var(--keys-text);
     --text: hsl(0, 0%, 100%);
   }
   html[data-theme="theme3"] {
@@ -71,6 +73,7 @@
     --digits-dark: hsl(290, 70%, 36%);
 
     --keys-text: hsl(52, 100%, 62%);
+    --display-text: var(--keys-text);
     --text-dark: hsl(198, 20%, 13%);
     --text: hsl(0, 0%, 100%);
   }

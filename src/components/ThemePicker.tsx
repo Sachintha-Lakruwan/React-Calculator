@@ -1,16 +1,31 @@
+import { useEffect, useState } from "react";
+
 export default function ThemePicker() {
+  const [theme, setTheme] = useState<string>("theme1");
+
+  useEffect(() => {
+    document.querySelector("html")?.setAttribute("data-theme", theme);
+  }, [theme]);
   return (
-    <div className=" grid grid-cols-[2fr_3fr] gap-5 items-center">
-      <div className=" text-text-text text-xs font-semibold  tracking-wider">
+    <div className=" grid grid-cols-[2fr_3fr] gap-5 items-center ">
+      <div className=" text-xs font-semibold  tracking-wider text-display-text">
         THEME
       </div>
       <div className=" relative">
-        <div className=" absolute -top-full flex justify-between w-full text-text-text font-semibold text-sm px-1">
-          <p>1</p>
-          <p>2</p>
-          <p>3</p>
+        <div className=" absolute -top-full flex justify-between w-full font-semibold text-sm px-1 text-display-text">
+          <p onClick={() => setTheme("theme1")}>1</p>
+          <p onClick={() => setTheme("theme2")}>2</p>
+          <p onClick={() => setTheme("theme3")}>3</p>
         </div>
-        <div className=" rounded-full bg-background-keypad h-5 p-1">
+        <div
+          className={`rounded-full bg-background-keypad h-5 p-1 flex ${
+            theme === "theme1"
+              ? "justify-start"
+              : theme === "theme2"
+              ? "justify-center"
+              : "justify-end"
+          }`}
+        >
           <div className=" h-full aspect-square bg-equal-key rounded-full"></div>
         </div>
       </div>
