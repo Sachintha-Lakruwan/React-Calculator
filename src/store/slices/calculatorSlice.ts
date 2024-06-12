@@ -40,7 +40,10 @@ const calSlice = createSlice({
       state.expression = state.expression + ".";
     },
     pressMinus: (state) => {
-      // 12 + -
+      const length = state.expression.length;
+      if (operators.includes(state.expression[length - 1])) {
+        return;
+      }
       state.expression = state.expression + "-";
     },
     pressDel: (state) => {
@@ -48,15 +51,24 @@ const calSlice = createSlice({
       state.expression = state.expression.slice(0, -1);
     },
     pressPlus: (state) => {
-      // 12 + +
+      const length = state.expression.length;
+      if (operators.includes(state.expression[length - 1])) {
+        return;
+      }
       state.expression = state.expression + "+";
     },
     pressX: (state) => {
-      // 12 + +
+      const length = state.expression.length;
+      if (operators.includes(state.expression[length - 1])) {
+        return;
+      }
       state.expression = state.expression + "*";
     },
     pressDivide: (state) => {
-      // 12 + /
+      const length = state.expression.length;
+      if (operators.includes(state.expression[length - 1])) {
+        return;
+      }
       state.expression = state.expression + "/";
     },
     pressReset: (state) => {
