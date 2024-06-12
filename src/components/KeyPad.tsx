@@ -11,9 +11,79 @@ import {
   pressReset,
   pressX,
 } from "../store/slices/calculatorSlice";
+import { useEffect } from "react";
 
 export default function KeyPad() {
   const dispatch = useAppDispatch();
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
+  function handleKeyDown(e: KeyboardEvent) {
+    console.log(e.key);
+    switch (e.key) {
+      case "1":
+        dispatch(pressButton("1"));
+        break;
+      case "2":
+        dispatch(pressButton("2"));
+        break;
+      case "3":
+        dispatch(pressButton("3"));
+        break;
+      case "4":
+        dispatch(pressButton("4"));
+        break;
+      case "5":
+        dispatch(pressButton("5"));
+        break;
+      case "6":
+        dispatch(pressButton("6"));
+        break;
+      case "7":
+        dispatch(pressButton("7"));
+        break;
+      case "8":
+        dispatch(pressButton("8"));
+        break;
+      case "9":
+        dispatch(pressButton("9"));
+        break;
+      case "0":
+        dispatch(pressButton("0"));
+        break;
+      case ".":
+        dispatch(pressDot());
+        break;
+      case "/":
+        dispatch(pressDivide());
+        break;
+      case "x":
+        dispatch(pressX());
+        break;
+      case "*":
+        dispatch(pressX());
+        break;
+      case "-":
+        dispatch(pressMinus());
+        break;
+      case "+":
+        dispatch(pressPlus());
+        break;
+      case "Enter":
+        dispatch(pressEqual());
+        break;
+      case "Backspace":
+        dispatch(pressDel());
+        break;
+      case "Delete":
+        dispatch(pressDel());
+        break;
+      case " ":
+        dispatch(pressReset());
+        break;
+    }
+  }
   return (
     <div className=" bg-background-keypad rounded-md grid grid-rows-5 grid-cols-4 gap-4 p-5 sm:gap-6 sm:p-5">
       <Key text="7" func={() => dispatch(pressButton("7"))} />
