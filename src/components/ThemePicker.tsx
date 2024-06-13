@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function ThemePicker() {
   const [theme, setTheme] = useState<string>("theme1");
@@ -26,7 +27,10 @@ export default function ThemePicker() {
               : "justify-end"
           }`}
         >
-          <div className=" h-full aspect-square bg-equal-key rounded-full"></div>
+          <motion.div
+            layout
+            className=" h-full aspect-square bg-equal-key rounded-full"
+          ></motion.div>
         </div>
       </div>
     </div>
