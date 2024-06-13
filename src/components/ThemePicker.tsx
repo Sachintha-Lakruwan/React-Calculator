@@ -13,10 +13,16 @@ export default function ThemePicker() {
         THEME
       </div>
       <div className=" relative">
-        <div className=" absolute -top-full flex justify-between w-full font-semibold text-sm px-1 text-display-text">
-          <p onClick={() => setTheme("theme1")}>1</p>
-          <p onClick={() => setTheme("theme2")}>2</p>
-          <p onClick={() => setTheme("theme3")}>3</p>
+        <div className=" h-[200%] absolute -top-full flex justify-between w-full font-semibold text-sm px-1 text-display-text">
+          <p className=" px-1" onClick={() => setTheme("theme1")}>
+            1
+          </p>
+          <p className=" px-1" onClick={() => setTheme("theme2")}>
+            2
+          </p>
+          <p className=" px-1" onClick={() => setTheme("theme3")}>
+            3
+          </p>
         </div>
         <div
           className={`rounded-full bg-background-keypad h-5 p-1 flex ${
